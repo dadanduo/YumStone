@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="horizontal" >
+    <LinearLayout
+        android:id="@+id/main_linearlayout"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="open"
+            android:text="打开" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="readCardType"
+            android:text="读取卡类型" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="reset"
+            android:text="复位" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="isExists"
+            android:text="检卡" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="apduComm"
+            android:text="发送APDU指令" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="halt"
+            android:text="断开非接卡" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="auth"
+            android:text="认证" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addValue"
+            android:text="加值" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="reduceValue"
+            android:text="减值" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="readBlockData"
+            android:text="读取块数据" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="writeBlock"
+            android:text="写块数据" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="close"
+            android:text="关闭" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+
+</head>
+<body>
+<button id="getQrCode" onclick="window.android.getQrCodeValue()">调用二维码</button>
+<button id="pay" onclick="getPayMethods()">调用支付</button>
+<button id="getplay" onclick="printStart()">调用打印</button>
+<button id="getic" onclick="window.android.getContactlessIcCard()">调用ic卡</button>
+<script type="text/javascript">
+   //打印调用
+   function printStart()
+   {
+       var printValue= {name:"cxh",sex:"man" };
+       window.android.printStart(JSON.stringify(printValue));
+   }
+   //支付调用
+   function getPayMethods()
+   {
+      var payValue={"proc_tp":"00","pay_tp":"0","amt":"0.01","msg_tp":"0200","proc_cd":"000000","order_no":"123456789","appid":"appid","time_stamp":"2017/5/27 13:09","order_info":"123456"};
+      
+	 window.android.getPayMethods(JSON.stringify(payValue));
+   }
+   //二维码的回调函数
+    function  RetrunQrCodeValue(data)
+    {
+        alert("返回数据"+data);
+    }
+    //支付的回调函数
+    function  PayRetrunValue(data)
+    {
+        alert("返回数据"+data);
+    }
+    //打印回调函数
+    function  RetrunPrint(data)
+    {
+        alert("返回数据"+data);
+    }
+	//ic卡返回回调函数
+	function RetrunIc(data)
+	{
+	  alert("返回状态值"+data)
+	}
+</script>
+</body>
+</html>

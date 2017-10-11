@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.yummobilestone.yumstone">
+
+
+
+    <!--=======================================================================================================-->
+    <!-- 权限位 -->
+    <!--允许程序写入外部存储，如SD卡上写文件  -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 设置访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 拉卡拉设置打印机权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MID_PRINTER" />
+    <!-- 二维码扫描功能 权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 访问拉卡拉系统设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MID_SYSTEMDEV" />
+    <!-- 机型判断的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问非接触IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MID_RFCARD" />
+    <!--=======================================================================================================-->
+
+
+    <application
+        android:name=".App.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--h5入口页面注册-->
+        <activity android:name=".WebH5Activity"></activity>
+        <!--二维码注册页面-->
+        <activity
+            android:name=".QrCodeScan.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- 拉卡拉支付页面 -->
+        <activity  android:name=".Activity.PayMoneyActivity"/>
+        <!-- 二维码扫描页面 -->
+        <!-- 打印页面 -->
+        <activity android:name=".Activity.printActivity"></activity>
+        <!--非接触式IC卡注册页面-->
+        <activity  android:name=".Activity.IcActivity"></activity>
+    </application>
+
+</manifest>

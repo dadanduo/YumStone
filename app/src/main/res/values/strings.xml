@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- =============================中文============================== -->
+    <string name="app_name">YumStone</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <!-- ========================================================= -->
+
+    </resources>
